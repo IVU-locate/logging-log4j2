@@ -124,6 +124,17 @@
     </plugins>
   </build>
 
+  <distributionManagement>
+    <snapshotRepository>
+      <id>l4-snapshots</id>
+      <url>${ivu.l4.snapshot.url}</url>
+    </snapshotRepository>
+    <repository>
+      <id>l4-releases</id>
+      <url>${ivu.l4.release.url}</url>
+    </repository>
+  </distributionManagement>
+
   <scm>
     <tag>log4j-2.3IVUp01</tag>
   </scm>
