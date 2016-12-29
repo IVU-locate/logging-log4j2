@@ -1,6 +1,12 @@
-/.project
+# Eclipse
+.project
+.settings
+.classpath
+
+# IntelliJ
 /.idea
 **/*.iml
+
+# Maven
 **/target
-/target/
-/.settings
+target/
