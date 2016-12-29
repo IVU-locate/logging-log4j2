@@ -142,10 +142,10 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:http://git-wip-us.apache.org/repos/asf/logging-log4j2.git</connection>
-    <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/logging-log4j2.git</developerConnection>
-    <url>https://git-wip-us.apache.org/repos/asf?p=logging-log4j2.git;a=summary</url>
-    <tag>log4j-2.3</tag>
+    <connection>scm:git:https://github.com/IVU-locate/logging-log4j2.git</connection>
+    <developerConnection>scm:git:https://github.com/IVU-locate/logging-log4j2.git</developerConnection>
+    <url>https://github.com/IVU-locate/logging-log4j2</url>
+    <tag>log4j-${Log4jReleaseVersion}</tag>
   </scm>
   <organization>
     <name>Apache Software Foundation</name>
@@ -154,7 +154,7 @@
   <properties>
     <!-- make sure to update these for each release! -->
     <log4jParentDir>${basedir}</log4jParentDir>
-    <Log4jReleaseVersion>2.3</Log4jReleaseVersion>
+    <Log4jReleaseVersion>2.3IVUp01</Log4jReleaseVersion>
     <Log4jReleaseCount>eighteenth</Log4jReleaseCount>
     <Log4jReleaseManager>Ralph Goers</Log4jReleaseManager>
     <Log4jReleaseKey>B3D8E1BA</Log4jReleaseKey>
@@ -558,7 +558,7 @@
           </exclusion>
         </exclusions>
       </dependency>
- 	    <dependency>
+       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
         <version>2.5</version>
@@ -1093,6 +1093,17 @@
       </plugin>
     </plugins>
   </reporting>
+    <distributionManagement>
+    <snapshotRepository>
+      <id>l4-snapshots</id>
+      <url>${ivu.l4.snapshot.url}</url>
+    </snapshotRepository>
+    <repository>
+      <id>l4-releases</id>
+      <url>${ivu.l4.release.url}</url>
+    </repository>
+  </distributionManagement>
+  <!-- 
   <distributionManagement>
      <repository>
       <id>apache.releases.https</id>
@@ -1109,6 +1120,7 @@
       <url>scp://people.apache.org/www/logging.apache.org/log4j/2.0</url>
     </site>
   </distributionManagement>
+   -->
   <modules>
     <module>log4j-api</module>
     <module>log4j-core</module>
