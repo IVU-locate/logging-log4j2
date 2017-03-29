@@ -268,7 +268,7 @@ public final class ReflectionUtil {
     // migrated from ThrowableProxy
     public static Stack<Class<?>> getCurrentStackTrace() {
         // benchmarks show that using the SecurityManager is much faster than looping through getCallerClass(int)
-        if (SECURITY_MANAGER != null) {
+        if (SECURITY_MANAGER != null && SECURITY_MANAGER.getClassContext() != null) {
             final Class<?>[] array = SECURITY_MANAGER.getClassContext();
             final Stack<Class<?>> classes = new Stack<Class<?>>();
             classes.ensureCapacity(array.length);
